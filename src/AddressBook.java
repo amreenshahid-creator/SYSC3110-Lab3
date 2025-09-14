@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class AddressBook {
 
-    private ArrayList<BuddyInfo> buddyList;
+    private final ArrayList<BuddyInfo> buddyList;
 
     public AddressBook() {
         buddyList = new ArrayList<BuddyInfo>();
@@ -12,14 +12,14 @@ public class AddressBook {
         buddyList.add(buddy);
     }
 
-    public void remove(BuddyInfo buddy) {
+    public void removeBuddy(BuddyInfo buddy) {
         buddyList.remove(buddy);
     }
 
-
     public static void main(String[] args) {
-        System.out.println("Address Book");
+        BuddyInfo buddy = new BuddyInfo("Tom", 613,  "Carleton");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.removeBuddy(buddy);
     }
-
-
 }
