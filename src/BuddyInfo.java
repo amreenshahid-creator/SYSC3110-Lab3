@@ -26,6 +26,10 @@ public class BuddyInfo {
         return address;
     }
 
+    public void testBranch() {
+        System.out.println("Testing branch");
+    }
+
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("Homer", 613, "Carleton");
         System.out.println("Hello " + buddy.getName());
